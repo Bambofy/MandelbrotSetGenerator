@@ -11,7 +11,7 @@ namespace MandelbrotSetGenerator
         /// Points within the Mandelbrot Set do not tend towards infinity but have a cyclic pattern.
         /// Points outside of the Mandelbrot Set tends towards infinity the greater the iteration number.
         /// </summary>
-        private static int MAX_ITERATION = 5; // how many iterations in the orbit of 0 to complete.
+        private static int MAX_ITERATION = 25; // how many iterations in the orbit of 0 to complete.
 
         /// <summary>
         /// What we are going to assume to be the threshold value to say that a value is trending towards infinity.
@@ -21,8 +21,6 @@ namespace MandelbrotSetGenerator
 
         static void Main(string[] args)
         {
-            Complex c = new Complex(1.0, 1.0);
-
             /// Image proprerties.
             int ImageXMin = 0;
             int ImageXMax = 800;
@@ -44,8 +42,6 @@ namespace MandelbrotSetGenerator
             double Xmin = -2.0;
             double Xmax = 1;
             double Xstep = 0.001;
-
-            int numberOfXSteps = (int)Math.Floor((Xmax - Xmin) / Xstep);
 
             /// Limits of the IMAGINARY axis. (y axis).
             double Ymin = -1.0;
